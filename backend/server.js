@@ -20,7 +20,7 @@ const db = require("./app/models");
 const Role = db.role;
 
 db.mongoose
-  .connect(`mongodb+srv://kowsarrahman:Sauron123@makemycomplain.fkbkt.mongodb.net/MakeMyComplain?retryWrites=true&w=majority`, {
+  .connect(`mongodb+srv://${dbConfig.USERNAME}:${dbConfig.PASSWORD}@makemycomplain.fkbkt.mongodb.net/${dbConfig.DATABASE}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
